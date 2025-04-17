@@ -1,0 +1,39 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4" id="WebApp_ID">
+	<display-name>banhang</display-name>
+	<servlet>
+		<servlet-name>indexServlet</servlet-name>
+		<servlet-class>servlet.indexServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>productlistServlet</servlet-name>
+		<servlet-class>servlet.productlistServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>productlistServlet</servlet-name>
+		<url-pattern>/Collection</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>indexServlet</servlet-name>
+		<url-pattern>/Home</url-pattern>
+	</servlet-mapping>
+<servlet>
+    <servlet-name>HomeControl</servlet-name>
+    <servlet-class>control.HomeControl</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>HomeControl</servlet-name>
+    <url-pattern>/home</url-pattern>
+</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
